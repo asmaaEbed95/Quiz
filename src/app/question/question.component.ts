@@ -1,6 +1,6 @@
 import { ApiService } from '../service/api.service';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router'
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'question',
@@ -18,7 +18,7 @@ export class QuestionComponent implements OnInit {
   }
 
   post(question: any) {
-    question.quizId = this.quizId
-    this.api.postQuestion(question)
+    question.quizId = Number(this.quizId);
+    this.api.postQuestion(question);
     }
 }
