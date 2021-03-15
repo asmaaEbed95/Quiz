@@ -33,9 +33,9 @@
         </form>
     </mat-card-content>
     <mat-card-actions>
-        <button *ngIf="!question.id" (click)="post(question)" mat-button>Post</button>
-        <button *ngIf="question.id" (click)="api.putQuestion(question)" mat-button>Update</button>
-        <button *ngIf="question.id" (click)="question={}" mat-button>New Question</button>
+        <button *ngIf="!question.id" (click)="post(question)" mat-raised-button color="primary">Post</button>
+        <button *ngIf="question.id" (click)="api.putQuestion(question)" mat-raised-button color="primary">Update</button>
+        <button *ngIf="question.id" (click)="question={}" mat-raised-button color="primary">New Question</button>
     </mat-card-actions>
 </mat-card>
 <questions></questions>
