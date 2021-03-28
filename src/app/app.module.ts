@@ -11,6 +11,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatRadioModule} from '@angular/material/radio';
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { RouterModule} from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
@@ -26,6 +27,7 @@ import { QuizListComponent } from './quiz-list/quiz-list.component';
 import { RegisterComponent } from './register/register.component';
 import { PlayComponent } from './play/play.component';
 import { PlayQuizComponent } from './play-quiz/play-quiz.component';
+import { FinishedComponent } from './finished/finished.component';
 
 const routes = [
   {path: '', component: HomeComponent},
@@ -48,7 +50,8 @@ const routes = [
     QuizListComponent,
     RegisterComponent,
     PlayComponent,
-    PlayQuizComponent
+    PlayQuizComponent,
+    FinishedComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +67,8 @@ const routes = [
     RouterModule.forRoot(routes),
     MatToolbarModule,
     MatExpansionModule,
-    MatRadioModule
+    MatRadioModule,
+    MatDialogModule
     ],
   providers: [ApiService, AuthService],
   bootstrap: [AppComponent]
